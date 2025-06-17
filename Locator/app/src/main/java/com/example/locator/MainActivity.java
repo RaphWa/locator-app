@@ -112,8 +112,9 @@ public class MainActivity extends AppCompatActivity {
                             if (startLocation == null) {  // check if initialization has not happened yet
                                 textViewDistance.setText("Please press Start!");
                             } else {
-                                String formattedDistance = l.distanceTo(startLocation) + " m";
-                                textViewDistance.setText(formattedDistance);
+                                String formattedDistance = "Distance: " + l.distanceTo(startLocation) + " m";
+                                String formattedAccuracy = "Acc: " + l.getAccuracy();
+                                textViewDistance.setText(formattedDistance + "\n" + formattedAccuracy);
                             }
                         }
                 );
